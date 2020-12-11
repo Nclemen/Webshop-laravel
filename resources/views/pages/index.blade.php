@@ -2,6 +2,9 @@
 
 
 @section('content')
-        <h1>{{$title}}</h1>
-        <p>this is the main page of ao-webshop!</p>
+                <div class="row">
+                        <div class="col-4">
+
+                        </div>
+                </div>
 @endsection

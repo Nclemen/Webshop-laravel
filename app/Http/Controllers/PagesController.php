@@ -13,4 +13,21 @@ class PagesController extends Controller
             'title'=>$title
         ]);
     }
+
+    public function product(){
+        $title = 'welcome to the ao-webshop';
+
+        return view('pages.index')->with([
+            'title'=>$title
+        ]);
+    }
+
+    public function login(){
+        $title = 'Login';
+
+        return view('pages.login')->with([
+            'title'=>$title
+        ]);
+    }
+    
 }

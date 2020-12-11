@@ -13,9 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PagesController@index');
-
-Route::get('/hello', function () {
-    // return view('welcome');
-    return 'Hello World!';
+Route::get('/', function () {
+    return view('welcome');
 });
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// });
+
+// Route::get('/', 'PagesController@index');
+
+// Route::get('/login', 'PagesController@login');
+
+// Route::get('/hello', function () {
+//     // return view('welcome');
+//     return 'Hello World!';
+// });
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
